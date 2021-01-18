@@ -22,7 +22,7 @@
 
 import UIKit
 
-@objc public protocol Springable {
+public protocol Springable {
     var autostart: Bool  { get set }
     var autohide: Bool  { get set }
     var animation: String  { get set }
@@ -54,7 +54,7 @@ import UIKit
 
 public class Spring : NSObject {
     
-    private unowned var view : Springable
+    private var view : Springable
     private var shouldAnimateAfterActive = false
     private var shouldAnimateInLayoutSubviews = true
     
